@@ -1,11 +1,11 @@
 import App from "./App.vue"; // App.jsx
 import vitedge from "vitedge";
-import { createRouter, createWebHistory } from "vue-router";
+import { createMemoryHistory, createRouter } from "vue-router";
 
 const routes = [{ path: "/", component: App }];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createMemoryHistory(),
   routes,
 });
 
